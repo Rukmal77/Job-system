@@ -7,6 +7,7 @@ package com.mycompany.rest.service.resources;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import db.JobSeeker;
+import db.ViewAppointmentUtils;
 import java.util.List;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;

@@ -4,6 +4,7 @@
  */
 package com.mycompany.rest.service.resources;
 
+import db.Consultant;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
