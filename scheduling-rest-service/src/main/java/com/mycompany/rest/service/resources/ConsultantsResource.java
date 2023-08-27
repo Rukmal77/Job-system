@@ -32,9 +32,9 @@ import javax.ws.rs.core.Response;
 @RequestScoped
 public class ConsultantsResource {
 
-static final String DB_URL = "jdbc:mysql://localhost:3306/appointmentscheduling?useSSL=false";
+static final String DB_URL = "jdbc:mysql://localhost:3306/onlineappoinment?useSSL=false";
     static final String USER = "root";
-    static final String PASS = "#ashinka123#";
+    static final String PASS = "#rukmal1114#";
     
     @GET
     @Produces(MediaType.APPLICATION_JSON)

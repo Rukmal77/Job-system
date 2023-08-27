@@ -22,7 +22,7 @@
 
         if (token) {
             // Send a request to validate the token and get user email
-            fetch('http://localhost:8080/sessionhandling-rest-service/api/validateToken', {
+            fetch('http://localhost:8080/scheduling-rest-service/api/validateToken', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

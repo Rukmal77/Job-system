@@ -18,7 +18,7 @@ import java.util.UUID;
 
 public class TokenUtils {
     
-     static final String DB_URL = "jdbc:mysql://localhost:3306/appointmentscheduling?useSSL=false";
+     static final String DB_URL = "jdbc:mysql://localhost:3306/onlineappoinment?useSSL=false";
     static final String USER = "root";
     static final String PASS = "#rukmal1114#";
     

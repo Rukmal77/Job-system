@@ -21,7 +21,7 @@
             };
 
            
-            fetch('http://localhost:8080/sessionhandling-rest-service/api/login/', {
+            fetch('http://localhost:8080/scheduling-rest-service/api/login/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -58,16 +58,76 @@
             });
         }
     </script>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+      body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  text-align: center;
+  padding: 100px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+form {
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+  </style>
 </head>
 <body>
+  <div class="container">
     <h2>Login</h2>
     <form id="loginForm">
-        <label for="email">Email</label>
-        <input type="text" id="email" name="email"><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password"><br><br>
-        <button type="button" onclick="login()">Login</button>
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+      <button type="button" onclick="login()">Login</button>
     </form>
     <div id="message"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
