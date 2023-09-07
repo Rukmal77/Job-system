@@ -63,7 +63,7 @@ logoutButton.addEventListener('click', () => {
         
         async function fetchConsultantsSchedule() {
     try {
-        const response = await fetch('http://localhost:8080/sessionhandling-rest-service/api/consultants');
+        const response = await fetch('http://localhost:8080/scheduling-rest-service/api/consultants');
         if (response.ok) {
             const data = await response.json();
             const tableBody = document.getElementById('consultantsTableBody');
@@ -242,7 +242,21 @@ fetchConsultantsSchedule();
                 </li>
             </ul>
         </section>
+        
+       <section id="consultants">
+    <h2>Consultant Schedule</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Date and Time</th>
+        </tr>
+        <tbody id="consultantsTableBody">
+            <!-- Data will be populated here dynamically -->
+        </tbody>
+    </table>
+</section>
     </main>
+    
     <button id="logoutButton">Logout</button>
     <footer>
         <p>&copy; 2023 The Jobs. All rights reserved.</p>

@@ -96,6 +96,35 @@ logoutButton.addEventListener('click', () => {
             // Redirect to the new URL
             window.location.href = url;
         }
+        async function fetchConsultantsSchedule() {
+    try {
+        const response = await fetch('http://localhost:8080/scheduling-rest-service/api/consultants');
+        if (response.ok) {
+            const data = await response.json();
+            const tableBody = document.getElementById('consultantsTableBody');
+            
+            data.forEach(schedule => {
+                const row = document.createElement('tr');
+                const nameCell = document.createElement('td');
+                const datetimeCell = document.createElement('td');
+                
+                nameCell.textContent =  schedule.firstname;;
+                datetimeCell.textContent = schedule.datetime;
+                
+                row.appendChild(nameCell);
+                row.appendChild(datetimeCell);
+                tableBody.appendChild(row);
+            });
+        } else {
+            console.error('Error:', response.status);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+// Call the function to populate the table on page load
+fetchConsultantsSchedule();
     </script>
     <style>w7
         /* Reset default margin and padding */
@@ -253,7 +282,7 @@ logoutButton.addEventListener('click', () => {
 <ul class="job-list">
     <li>
         <a href="#" onclick="updatedatetime()">Update Date and Time</a>
-        <!--<a href="updatedatetime.html">Update Date and Time</a>-->
+       
     </li>
 </ul>
       <h2>View Appointment details</h2>
@@ -266,6 +295,18 @@ logoutButton.addEventListener('click', () => {
             
      
     </section>
+       <section id="consultants">
+    <h2>Consultant Schedule</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Date and Time</th>
+        </tr>
+        <tbody id="consultantsTableBody">
+            <!-- Data will be populated here dynamically -->
+        </tbody>
+    </table>
+</section>
 
   </main>
     
